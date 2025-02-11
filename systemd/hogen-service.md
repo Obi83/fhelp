@@ -1,10 +1,7 @@
-
-
-
-
 ###
 ###     Script      ###
 ###
+
 
 
 #!/bin/bash
@@ -74,29 +71,6 @@ spoof_mac() {
 
 # Execute
 spoof_mac
-EOF
-
-# Make the mspoo.sh file executable
-chmod +x /usr/local/bin/mspoo.sh
-
-echo "create: /etc/systemd/system/mspoo.service"
-echo ""
-# Create the mspoo.service file with systemd unit configuration
-cat << 'EOF' > /etc/systemd/system/mspoo.service
-[Unit]
-Description=MSPOO MACSpoofing Service
-After=network-online.target
-Wants=network-online.target
-
-[Service]
-Type=oneshot
-ExecStart=/usr/local/bin/mspoo.sh
-Restart=on-failure
-RestartSec=3
-
-[Install]
-WantedBy=multi-user.target
-EOF
 
 
 
@@ -109,6 +83,8 @@ EOF
 ###
 ###        Service Systemd      ###
 ###
+
+
 
 
 [Unit]

@@ -73,18 +73,22 @@ For additional privacy, the script includes a service that spoofs the MAC addres
 ### Installation
 1. Clone the repository:
     
-    git clone https://github.com/Obi83/fhelp.git
-    or Download: https://github.com/Obi83/fhelp
+    
+        git clone https://github.com/Obi83/fhelp.git
+   
+    
+        cd fhelp
 
-    cd fhelp
-
-2. Make the `fhelp.sh` script executable:   
+   
+3. Make the `fhelp.sh` script executable:   
     
        sudo chmod +x fhelp.sh
 
-3. Execute the `fhelp.sh` script as root:
+
+4. Execute the `fhelp.sh` script as root:
 
         sudo ./fhelp.sh
+
 
 ### Usage
 Run the `fhelp.sh` script to perform the following tasks:

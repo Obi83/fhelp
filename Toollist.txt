@@ -1,0 +1,27 @@
+### Tool Installing
+
+## This step focuses on installing essential tools and utilities that enhance the functionality of your Fedora system. The script performs the following actions:
+
+# Installing Flatpak and Gnome Platform: 
+The script installs the org.gnome.Platform/x86_64/47 package using Flatpak, which provides a runtime for Gnome applications.
+
+# Adding RPM Fusion Repositories: 
+It adds both free and nonfree RPM Fusion repositories, which are popular sources for additional software not included in the default Fedora repositories.
+
+# Installing Essential Packages: 
+The script checks for and installs a list of useful tools, including:
+
+        terminator:          A terminal emulator with advanced features.
+        shellcheck:          A static analysis tool for shell scripts.
+        inxi:                A system information tool.
+        ufw:                 A user-friendly firewall.
+        tor:                 Anonymity network client.
+        fastfetch:           A fast system information tool.
+        guake:               A dropdown terminal.
+        timeshift:           A system restore tool.
+        steam:               A digital distribution platform for video games.
+        wireshark:           A network protocol analyzer.
+        torbrowser-launcher: A tool to help download and install the Tor Browser.
+        vlc:                 A multimedia player.
+        codium:              An open-source build of Visual Studio Code.
+        Installing Additional Flatpak Packages: The script installs ExtensionManager and ProtonPlus using Flatpak.

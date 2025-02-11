@@ -59,7 +59,7 @@ install_gnome_platform
 # Function to search for correct package names and install them
 search_and_install_packages() {
     # List of packages to install
-    packages=("terminator" "shellcheck" "inxi" "ufw" "tor" "fastfetch" "guake" "timeshift" "steam" "wireshark" "torbrowser-launcher" "vlc")
+    packages=("terminator" "shellcheck" "inxi" "ufw" "tor" "fastfetch" "guake" "timeshift" "steam" "wireshark" "torbrowser-launcher" "vlc" "gnome-tweaks")
 
     for package in "${packages[@]}"; do
         # Check if the package is already installed
@@ -90,7 +90,7 @@ sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-r
 sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm  -E %fedora).noarch.rpm
 sudo dnf group upgrade -y core
 sudo dnf4 group upgrade -y core
-sudo dnf install -y terminator inxi ufw tor fastfetch guake timeshift steam wireshark torbrowser-launcher vlc
+sudo dnf install -y terminator inxi ufw tor fastfetch guake timeshift steam wireshark torbrowser-launcher vlc gnome-tweaks
 sudo rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
 printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" | sudo tee -a /etc/yum.repos.d/vscodium.repo
 sudo dnf install -y codium

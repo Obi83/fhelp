@@ -101,7 +101,8 @@ Run the `fhelp.sh` script to perform the following tasks:
 - Set up and enable hostname generator service
 - Set up and enable MAC address spoofing service
 
-
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/hogen-mspoo1.png)
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/hogen-mspoo2.png)
 
 # References
 This script was created by Obi83 with assistance from AI. For a full list of references and sources that inspired parts of this script, please see the [REFERENCES.md](REFERENCES.md) file.

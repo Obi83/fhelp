@@ -90,6 +90,9 @@ For additional privacy, the script includes a service that spoofs the MAC addres
         sudo ./fhelp.sh
 
 
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/apps1.png)
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/apps2.png)
+
 # Usage
 Run the `fhelp.sh` script to perform the following tasks:
 

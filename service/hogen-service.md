@@ -28,10 +28,12 @@ name="$(tr '[:lower:]' '[:upper:]' <<< ${name:0:1})${name:1:1}$(tr '[:lower:]' '
 
 # New hostname
 newhn=$name
+
 hostnamectl set-hostname $newhn
 
 # Update /etc/hosts
-echo "127.0.0.1    localhost" > /etc/hosts
+echo "127.0.0.1    localhost" > /etc/hosts 
+
 echo "127.0.0.1    $newhn" >> /etc/hosts
 
 exit
@@ -45,12 +47,16 @@ exit
 
 [Unit]
 Description=HOGEN Hostname Generator
+
 After=network-online.target
+
 Wants=network-online.target
 
 [Service]
 ExecStart=/usr/local/bin/hogen.sh
+
 Restart=on-failure
+
 RestartSec=3
 
 [Install]

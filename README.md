@@ -68,7 +68,7 @@ For additional privacy, the script includes a service that spoofs the MAC addres
 - **Displaying the New MAC Address**: Confirms the change by displaying the new MAC address.
 - **Systemd Service**: Ensures the MAC address is changed at boot.
 
-
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/fhelp.png)
 
 # Installation
 1. Clone the repository:

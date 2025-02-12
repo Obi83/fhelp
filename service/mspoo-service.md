@@ -1,10 +1,4 @@
-
-
-
-
-###
-###     Script      ###
-###
+# SCRIPT.sh
 
 
 #!/bin/bash
@@ -80,27 +74,23 @@ spoof_mac
 
 
 
-
-
-
-
-
-###
-###        Service Systemd      ###
-###
+# SYSTEMD.service
 
 
 [Unit]
 Description=MSPOO MACSpoofing Service
+
 After=network-online.target
+
 Wants=network-online.target
 
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/mspoo.sh
+
 Restart=on-failure
+
 RestartSec=3
 
 [Install]
 WantedBy=multi-user.target
-

@@ -70,7 +70,50 @@ spoof_mac() {
 spoof_mac
 
 
-
+    # hogen.sh: 
+   
+        #!/bin/bash
+        if [ "$EUID" -ne 0 ]; then
+            echo "Please run this script as root."
+            exit 1
+        fi
+        if ! command -v ip &> /dev/null; then
+            echo "'ip' command not found. Please install it and try again."
+            exit 1
+        fi
+        get_primary_interface() {
+        INTERFACE=$(ip route | grep default | awk '{print $5}' | head -n 1)
+        if [ -z "$INTERFACE" ]; then
+            echo "No network interface found."
+            exit 1
+        fi
+        }
+        generate_random_mac() {
+        echo -n "02" # Locally administered address (LAA) and unicast address
+        for i in {1..5}; do
+            printf ":%02x" $((RANDOM % 256))
+        done
+        echo # Ensure a newline at the end
+        }
+        spoof_mac() {
+            get_primary_interface
+            NEW_MAC=$(generate_random_mac)
+            echo "Spoofing MAC address for interface $INTERFACE with new MAC: $NEW_MAC"
+            if ! ip link set dev $INTERFACE down; then
+                echo "Failed to bring down the network interface."
+                exit 1
+            fi
+            if ! ip link set dev $INTERFACE address $NEW_MAC; then
+                echo "Failed to change the MAC address."
+                exit 1
+            fi
+            if ! ip link set dev $INTERFACE up; then
+                echo "Failed to bring up the network interface."
+                exit 1
+            fi
+            ip link show $INTERFACE | grep ether
+        }
+        spoof_mac
 
 
 
@@ -100,3 +143,20 @@ RestartSec=3
 [Install]
 
 WantedBy=multi-user.target
+
+
+    # hogen.service:
+
+        [Unit]
+        Description=MSPOO MACSpoofing Service
+        After=network-online.target
+        Wants=network-online.target
+
+        [Service]
+        Type=oneshot
+        ExecStart=/usr/local/bin/mspoo.sh
+        Restart=on-failure
+        RestartSec=3
+
+        [Install]
+        WantedBy=multi-user.target

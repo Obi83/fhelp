@@ -83,3 +83,22 @@ RestartSec=3
 [Install]
 
 WantedBy=multi-user.target
+
+
+
+    ### hogen.service:
+
+        
+        [Unit]
+        Description=HOGEN Hostname Generator
+        After=network-online.target
+        Wants=network-online.target
+        
+        [Service]
+        ExecStart=/usr/local/bin/hogen.sh
+        Restart=on-failure
+        RestartSec=3
+
+        [Install]
+        WantedBy=multi-user.target
+        

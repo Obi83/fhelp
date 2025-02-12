@@ -105,4 +105,4 @@ This script was created by Obi83 with assistance from AI. For a full list of ref
 
 
 # License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for details.

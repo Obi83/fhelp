@@ -3,19 +3,19 @@
 
 #!/bin/bash
 
-# Check if the script is run as root
+### Check if the script is run as root
 if [ "$EUID" -ne 0 ]; then
     echo "Please run this script as root."
     exit 1
 fi
 
-# Make sure that 'ip' command is available
+### Make sure that 'ip' command is available
 if ! command -v ip &> /dev/null; then
     echo "'ip' command not found. Please install it and try again."
     exit 1
 fi
 
-# Determine primary network interface
+### Determine primary network interface
 get_primary_interface() {
     INTERFACE=$(ip route | grep default | awk '{print $5}' | head -n 1)
     
@@ -25,7 +25,7 @@ get_primary_interface() {
     fi
 }
 
-# Generate random MAC address
+### Generate random MAC address
 generate_random_mac() {
     echo -n "02" # Locally administered address (LAA) and unicast address
     for i in {1..5}; do
@@ -34,7 +34,7 @@ generate_random_mac() {
     echo # Ensure a newline at the end
 }
 
-# Spoof MAC address
+### Spoof MAC address
 spoof_mac() {
     # Get the primary network interface
     get_primary_interface
@@ -66,7 +66,7 @@ spoof_mac() {
     ip link show $INTERFACE | grep ether
 }
 
-# Execute
+### Execute
 spoof_mac
 
 

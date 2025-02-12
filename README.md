@@ -1,10 +1,8 @@
-###
-###     fhelp     ###   
-###
+#     fhelp     
 
 
 ### Description
-`fhelp` is a helper script designed for fresh Fedora (version 41) installations. It automates the process of updating the system, installing useful packages, and configuring services to save time and effort. This script also includes features to spoof the hostname and MAC address for enhanced privacy. This script was tested on Fedora 41 Workstation.
+`fhelp` is a helper script designed for fresh Fedora (version 41) installations. It automates the process of updating the system, installing useful packages, and configuring services to save time and effort. This script also includes features to spoof the hostname and MAC address for enhanced privacy. This script was tested on Fedora 41 Workstation Gnome-Desktop.
 
 
 ### Features
@@ -16,16 +14,16 @@
 
 
 
-### Detailed Steps
+# Detailed Steps
 
-# 1. Full Update Circle
+### 1. Full Update Circle
 The script begins by ensuring your Fedora system is fully updated and cleaned. This step includes:
 
 - **Updating System Packages**: Fetches and installs the latest updates for all installed packages.
 - **Removing Unnecessary Packages**: Removes packages that are no longer needed.
 - **Cleaning Up Package Cache**: Frees up disk space by removing cached package files.
 
-# 2. Tool Installing
+### 2. Tool Installing
 This step focuses on installing essential tools and utilities:
 
 - **Installing Flatpak and Gnome Platform**: Provides a runtime for Gnome applications.
@@ -52,7 +50,7 @@ This step focuses on installing essential tools and utilities:
         gnome-tweaks:        A tool for customizing desktop, windowing, workspaces, and more
         Installing Additional Flatpak Packages: The script installs ExtensionManager and ProtonPlus using Flatpak.
 
-# 3. Hostname Changer
+### 3. Hostname Changer
 To enhance privacy, the script includes a service that generates a random hostname:
 
 - **Generating a Random Hostname**: Creates an 8-character hostname from random syllables.
@@ -60,7 +58,7 @@ To enhance privacy, the script includes a service that generates a random hostna
 - **Updating `/etc/hosts`**: Updates the hosts file to reflect the new hostname.
 - **Systemd Service**: Ensures the hostname is set at boot.
 
-# 4. MAC Address Changer
+### 4. MAC Address Changer
 For additional privacy, the script includes a service that spoofs the MAC address:
 
 - **Determining the Primary Network Interface**: Identifies the primary network interface.
@@ -71,7 +69,7 @@ For additional privacy, the script includes a service that spoofs the MAC addres
 
 
 
-### Installation
+# Installation
 1. Clone the repository:
     
     
@@ -91,7 +89,7 @@ For additional privacy, the script includes a service that spoofs the MAC addres
         sudo ./fhelp.sh
 
 
-### Usage
+# Usage
 Run the `fhelp.sh` script to perform the following tasks:
 
 - Update and clean the system
@@ -101,10 +99,10 @@ Run the `fhelp.sh` script to perform the following tasks:
 
 
 
-### References
+# References
 This script was created by Obi83 with assistance from AI. For a full list of references and sources that inspired parts of this script, please see the [REFERENCES.md](REFERENCES.md) file.
 
 
 
-### License
+# License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

@@ -38,7 +38,7 @@ exit
 
 
 
-    ### hogen.sh: 
+    # hogen.sh: 
    
         #!/bin/bash
         if [ "$EUID" -ne 0 ]; then

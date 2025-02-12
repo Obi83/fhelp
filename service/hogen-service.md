@@ -1,6 +1,4 @@
-###
-###     Script      ###
-###
+# SCRIPT.sh
 
 
 #!/bin/bash
@@ -40,9 +38,9 @@ exit
 
 
 
-###
-###        Service Systemd      ###
-###
+
+# SYSTEMD.service
+
 
 
 [Unit]

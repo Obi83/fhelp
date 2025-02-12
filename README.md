@@ -1,4 +1,4 @@
-#     fhelp     
+#     fhelp     - Ultimate Fedora Post-Install Helper
 
 
 ### Description

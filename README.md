@@ -4,6 +4,7 @@
 ### Description
 `fhelp` is a helper script designed for fresh Fedora (version 41) installations. It automates the process of updating the system, installing useful packages, and configuring services to save time and effort. This script also includes features to spoof the hostname and MAC address for enhanced privacy. This script was tested on Fedora 41 Workstation Gnome-Desktop.
 
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/Fedor-41-fastfetch.png)
 
 ### Features
 - Full update/upgrade circle
@@ -106,3 +107,6 @@ This script was created by Obi83 with assistance from AI. For a full list of ref
 
 # License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.txt) file for details.
+
+
+[def]: media/Fedor-41-fastfetch.png

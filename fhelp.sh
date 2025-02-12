@@ -299,9 +299,9 @@ echo "##*fhelp*##+##*fhelp*##"
 echo ""
 
 # Last Words
-echo "Happy to say everything is done! fhelp did the job!"
-echo "it installed some useful helpers, and spoofed your hostname and MAC address for privacy."
-echo "This project is licensed under the MIT License - see the [LICENSE](https://github.com/Obi83/khelp/blob/main/LICENSE) file for details."
+echo "everything is done!"
+echo "fhelp installed some useful helpers, and spoofed your hostname and MAC address for privacy."
+echo "This project is licensed under the MIT License - see the [LICENSE](https://github.com/Obi83/fhelp/blob/main/LICENSE) file for details."
 echo ""
 
 # Reboot the system

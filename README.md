@@ -4,7 +4,9 @@
 ### Description
 `fhelp` is a helper script designed for fresh Fedora (version 41) installations. It automates the process of updating the system, installing useful packages, and configuring services to save time and effort. This script also includes features to spoof the hostname and MAC address for enhanced privacy. This script was tested on Fedora 41 Workstation Gnome-Desktop.
 
+
 ![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/Fedor-41-fastfetch.png)
+
 
 ### Features
 - Full update/upgrade circle
@@ -14,6 +16,7 @@
 - MAC address changer
 
 
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/fhelp.png)
 
 # Detailed Steps
 
@@ -51,6 +54,11 @@ This step focuses on installing essential tools and utilities:
         gnome-tweaks:        A tool for customizing desktop, windowing, workspaces, and more
         Installing Additional Flatpak Packages: The script installs ExtensionManager and ProtonPlus using Flatpak.
 
+
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/apps1.png)
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/apps2.png)
+
+
 ### 3. Hostname Changer
 To enhance privacy, the script includes a service that generates a random hostname:
 
@@ -68,7 +76,10 @@ For additional privacy, the script includes a service that spoofs the MAC addres
 - **Displaying the New MAC Address**: Confirms the change by displaying the new MAC address.
 - **Systemd Service**: Ensures the MAC address is changed at boot.
 
-![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/fhelp.png)
+
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/hogen-mspoo1.png)
+![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/hogen-mspoo2.png)
+
 
 # Installation
 1. Clone the repository:
@@ -90,8 +101,7 @@ For additional privacy, the script includes a service that spoofs the MAC addres
         sudo ./fhelp.sh
 
 
-![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/apps1.png)
-![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/apps2.png)
+
 
 # Usage
 Run the `fhelp.sh` script to perform the following tasks:
@@ -101,8 +111,6 @@ Run the `fhelp.sh` script to perform the following tasks:
 - Set up and enable hostname generator service
 - Set up and enable MAC address spoofing service
 
-![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/hogen-mspoo1.png)
-![Fedora 41 Workstation - Fastfetch](https://github.com/Obi83/fhelp/blob/main/media/hogen-mspoo2.png)
 
 # References
 This script was created by Obi83 with assistance from AI. For a full list of references and sources that inspired parts of this script, please see the [REFERENCES.md](REFERENCES.md) file.

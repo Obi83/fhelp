@@ -70,7 +70,7 @@ spoof_mac() {
 spoof_mac
 
 
-    # hogen.sh: 
+    # mspoo.sh: 
    
         #!/bin/bash
         if [ "$EUID" -ne 0 ]; then
@@ -145,7 +145,7 @@ RestartSec=3
 WantedBy=multi-user.target
 
 
-    # hogen.service:
+    # mspoo.service:
 
         [Unit]
         Description=MSPOO MACSpoofing Service

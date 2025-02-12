@@ -49,6 +49,7 @@ This step focuses on installing essential tools and utilities:
         torbrowser-launcher: A tool to help download and install the Tor Browser.
         vlc:                 A multimedia player.
         codium:              An open-source build of Visual Studio Code.
+        gnome-tweaks:        A tool for customizing desktop, windowing, workspaces, and more
         Installing Additional Flatpak Packages: The script installs ExtensionManager and ProtonPlus using Flatpak.
 
 # 3. Hostname Changer

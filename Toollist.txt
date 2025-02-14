@@ -17,7 +17,6 @@ The script checks for and installs a list of useful tools, including:
         ufw:                 A user-friendly firewall.
         tor:                 Anonymity network client.
         fastfetch:           A fast system information tool.
-        guake:               A dropdown terminal.
         timeshift:           A system restore tool.
         steam:               A digital distribution platform for video games.
         wireshark:           A network protocol analyzer.
